@@ -4,7 +4,8 @@
     "slug": "AwesomeProject",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    // "icon": "./assets/icon.png",
+    "icon": "./imagem-depositphotos-bgremover.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",

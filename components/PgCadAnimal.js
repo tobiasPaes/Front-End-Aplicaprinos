@@ -1,37 +1,40 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Image, TextInput, Button} from "react-native";
+import { View, Text, StyleSheet, Image, TextInput, Button, Alert} from "react-native";
 import QuebraLinha from "./QuebraLinha";
 import Space from "./Space";
 import Footer from "./Footer";
 
-function PgDel({navigation}){
+function PgCad({navigation}){
     return(
+        
         <View style={styles.container}>
             <Space />
             <QuebraLinha />
 
             <View style={styles.header}>
                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={{fontSize: 25,}}>DELETAR </Text>
-                    <Text style={{fontSize: 25,}}>ANIMAL </Text>
+                    <Text style={{fontSize: 25,}}>CADASTRAR </Text>
+                    <Text style={{fontSize: 25,}}>ANIMAL</Text>
                 </View>
-                <Image style={styles.imagem} source={require('./imagem-depositphotos-bgremover.png')}/>
+                <Image style={styles.imagem} source={require('../imagem-depositphotos-bgremover.png')}/>
             </View>
-            
             <QuebraLinha />
-            
-            <View style={styles.id}>
-                <Text>Digite o codigo do caprino:</Text>
-                <TextInput placeholder="Aqui"/>
+            <View style={styles.main}>
+                <TextInput id="peso" style={styles.partesMain} placeholder="PESO"/>
+                <TextInput id="genero" style={styles.partesMain} placeholder="GENERO"/>
+                <TextInput id="vacina" style={styles.partesMain} placeholder="VACINAS"/>
+                <TextInput id="codigo" style={styles.partesMain} placeholder="CODIGO"/>
+                <TextInput id="idade" style={styles.partesMain} placeholder="IDADE"/>
             </View>
-
-            <QuebraLinha />
-
-            <Button title="Deletar" />
+            <Button 
+            title='Enviar'
+            />
 
             <QuebraLinha />
 
             <Footer />
+
+           
 
         </View>
     )
@@ -55,7 +58,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignContent: 'center',
-        flexDirection: 'column',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
     },
     partesMain:{
         textAlign: 'center',
@@ -63,14 +67,7 @@ const styles = StyleSheet.create({
         borderColor: 'gray',
         borderWidth: 1,
         margin: 5,
-    },
-    id:{
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 15,
-        height: 90
     }
 })
 
-export default PgDel
+export default PgCad

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import PgAlim from './PgControlAlim';
-import Home from './PgPrincipal';
-import PgCad from './PgCadAnimal';
-import PgAdd from './PgAddPeso';
-import PgRelatorio from './PgRelatorio';
-import PgAtt from './PgAtt';
-import PgDel from './PgDel';
+import PgAlim from './components/PgControlAlim';
+// import Home from './PgPrincipal';
+import PgCad from './components/PgCadAnimal';
+import PgAdd from './components/PgAddPeso';
+import PgRelatorio from './components/PgRelatorio';
+import PgAtt from './components/PgAtt';
+import PgDel from './components/PgDel';
+import Home from './components/PgPrincipal'
 
 const Stack = createNativeStackNavigator();
 

@@ -15,7 +15,7 @@ function PgAlim({navigation}){
                     <Text style={{fontSize: 25,}}>DE</Text>
                     <Text style={{fontSize: 25,}}>ALIMENTAÇÃO</Text>
                 </View>
-                <Image style={styles.imagem} source={require('./imagem-depositphotos-bgremover.png')}/>
+                <Image style={styles.imagem} source={require('../imagem-depositphotos-bgremover.png')}/>
 
             </View>
             <QuebraLinha />

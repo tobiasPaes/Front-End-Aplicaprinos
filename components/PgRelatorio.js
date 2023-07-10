@@ -1,10 +1,10 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Image, TextInput, Button} from "react-native";
+import { View, Text, StyleSheet, Image, FlatList} from "react-native";
 import QuebraLinha from "./QuebraLinha";
 import Space from "./Space";
 import Footer from "./Footer";
 
-function PgAtt({navigation}){
+function PgRelatorio({navigation}){
     return(
         <View style={styles.container}>
             <Space />
@@ -12,28 +12,21 @@ function PgAtt({navigation}){
 
             <View style={styles.header}>
                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={{fontSize: 25,}}>ATUALIZAR </Text>
-                    <Text style={{fontSize: 25,}}>ANIMAL </Text>
+                    <Text style={{fontSize: 25,}}>RELATORIO </Text>
                 </View>
-                <Image style={styles.imagem} source={require('./imagem-depositphotos-bgremover.png')}/>
+                <Image style={styles.imagem} source={require('../imagem-depositphotos-bgremover.png')}/>
             </View>
             
             <QuebraLinha />
             
-            <View style={styles.id}>
-                <Text>Digite o codigo do caprino:</Text>
-                <TextInput placeholder="Aqui"/>
-            </View>
+            
 
-            <QuebraLinha />
 
             <View style={styles.main}>
-                <TextInput style={styles.partesMain} placeholder="PESO"/>
-                <TextInput style={styles.partesMain} placeholder="VACINAS"/>
-                <TextInput style={styles.partesMain} placeholder="IDADE"/>
+                <FlatList>
+                    
+                </FlatList>
             </View>
-
-            <Button title="Atualizar" />
 
             <QuebraLinha />
 
@@ -79,4 +72,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default PgAtt
+export default PgRelatorio

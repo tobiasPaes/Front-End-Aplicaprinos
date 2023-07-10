@@ -15,7 +15,7 @@ function PgAdd({navigation}){
                     <Text style={{fontSize: 25,}}>ADICIONAR </Text>
                     <Text style={{fontSize: 25,}}>NOVO PESO</Text>
                 </View>
-                <Image style={styles.imagem} source={require('./imagem-depositphotos-bgremover.png')}/>
+                <Image style={styles.imagem} source={require('../imagem-depositphotos-bgremover.png')}/>
             </View>
             
             <QuebraLinha />

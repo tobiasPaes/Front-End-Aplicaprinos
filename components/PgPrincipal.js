@@ -10,7 +10,7 @@ function Home({navigation}) {
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.textoCabeca}>Olá, Tobias</Text>
-          <Image style={styles.imagem} source={require('./imagem-depositphotos-bgremover.png')}/>
+          <Image style={styles.imagem} source={require('../imagem-depositphotos-bgremover.png')}/>
         </View>
 
         <QuebraLinha />

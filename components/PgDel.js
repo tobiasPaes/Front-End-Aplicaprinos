@@ -4,7 +4,7 @@ import QuebraLinha from "./QuebraLinha";
 import Space from "./Space";
 import Footer from "./Footer";
 
-function PgCad({navigation}){
+function PgDel({navigation}){
     return(
         <View style={styles.container}>
             <Space />
@@ -12,20 +12,22 @@ function PgCad({navigation}){
 
             <View style={styles.header}>
                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={{fontSize: 25,}}>CADASTRAR </Text>
-                    <Text style={{fontSize: 25,}}>ANIMAL</Text>
+                    <Text style={{fontSize: 25,}}>DELETAR </Text>
+                    <Text style={{fontSize: 25,}}>ANIMAL </Text>
                 </View>
-                <Image style={styles.imagem} source={require('./imagem-depositphotos-bgremover.png')}/>
+                <Image style={styles.imagem} source={require('../imagem-depositphotos-bgremover.png')}/>
             </View>
+            
             <QuebraLinha />
-            <View style={styles.main}>
-                <TextInput style={styles.partesMain} placeholder="PESO"/>
-                <TextInput style={styles.partesMain} placeholder="GENERO"/>
-                <TextInput style={styles.partesMain} placeholder="VACINAS"/>
-                <TextInput style={styles.partesMain} placeholder="CODIGO"/>
-                <TextInput style={styles.partesMain} placeholder="IDADE"/>
+            
+            <View style={styles.id}>
+                <Text>Digite o codigo do caprino:</Text>
+                <TextInput placeholder="Aqui"/>
             </View>
-            <Button title='Enviar'/>
+
+            <QuebraLinha />
+
+            <Button title="Deletar" />
 
             <QuebraLinha />
 
@@ -53,8 +55,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignContent: 'center',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
+        flexDirection: 'column',
     },
     partesMain:{
         textAlign: 'center',
@@ -62,7 +63,14 @@ const styles = StyleSheet.create({
         borderColor: 'gray',
         borderWidth: 1,
         margin: 5,
+    },
+    id:{
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 15,
+        height: 90
     }
 })
 
-export default PgCad
+export default PgDel
